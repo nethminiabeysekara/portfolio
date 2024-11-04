@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Me</title>
+    <script
+      src="https://kit.fontawesome.com/23df9ec51a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="portfolioCW.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header class="navbar">
+      <div class="logo">My Portfolio</div>
+
+      <ul>
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <i class="fas fa-bars menu-toggle" onclick="toggleMenu()"></i>
+    </header>
+    <br /><br />
+    <!-- About section -->
+    <div class="container">
+      <div id="about">
+        <div class="row1">
+          <div class="about-col-2">
+            <h1 class="sub-title">About Me</h1>
+            <br /><br />
+            <p>
+              I’m Gayathri Abeysekara, a full-stack developer specializing in
+              building responsive, user-centered web applications. With a strong
+              foundation in JavaScript, HTML, CSS and frameworks like React,Node
+              JS,ExpressJS etc. I’m passionate about bringing innovative ideas
+              to life online and continually strive to learn and adapt to new
+              technologies. My goal is to deliver efficient, tailored solutions
+              that enhance user interaction and meet project goals effectively.
+            </p>
+
+            <div class="tab-titles">
+              <p class="tab-links active-link" onclick="opentab('skills')">
+                Skills
+              </p>
+              <p class="tab-links" onclick="opentab('experiance')">
+                Languages & frameworks
+              </p>
+              <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Design web app interfaces</li>
+                <li>
+                  <span>Web and Mobile Development</span><br />Websites/ iOS and
+                  Android app Development
+                </li>
+                <li>
+                  <span>Cloud services</span><br />Provide Cloud related
+                  Services
+                </li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="experiance">
+              <ul>
+                <li><span>Frontend</span><br />React, Angular, NextJs</li>
+                <li><span>Backend</span><br />EXpressJS , SpringBoot</li>
+                <li><span>Version Control tools</span><br />Git , github</li>
+              </ul>
+            </div>
+
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022</span><br />Advanced Certificate in Higher
+                  Education at IIT (University of Westminster)
+                </li>
+                <li>
+                  <span>2020-2026</span><br />Bachelor's degree in Computer
+                  Science at University of Westminster UK
+                </li>
+                <li><span>2024</span><br />Web Development at AATC</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- image -->
+          <div class="about-col-1">
+            <img class="img" src="images/astonunt.png" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript for the website -->
+    <script>
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+      function opentab(tabname) {
+        for (let tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+
+        for (let tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+
+        // Add active classes to the clicked tab link and the corresponding tab content
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
+  </body>
+</html>

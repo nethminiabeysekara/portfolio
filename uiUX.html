@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box with Paragraph and Image</title>
+    <style>
+      /* Styling the container box */
+      .box {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 800px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        height: 300px;
+        background-color: #f2f2f2;
+        border: 2px solid #ababab;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 20px auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Styling for the paragraph  */
+      .box .content {
+        flex-basis: 40%;
+      }
+
+      /* Styling for the image  */
+      .box img {
+        flex-basis: 40%;
+        max-width: 100%;
+        height: 80%;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div class="content">
+        <h2>Fashion UI App</h2>
+        <p>
+          In this project, I developed a sleek, modern UI for a fashion app
+          aimed at enhancing the online shopping experience. The app features a
+          visually striking, user-friendly interface that allows users to browse
+          and purchase clothing with ease. By combining clean typography,
+          vibrant imagery, and strategic use of color, the app provides a
+          seamless shopping journey for fashion enthusiasts.
+        </p>
+        <a href="./UIUX projects/Fashion store.pdf">Learn more</a>
+      </div>
+
+      <img src="images/fashionimg.png" alt="Fashion UI App Screenshot" />
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <h2>Learnzilla</h2>
+        <p>
+          In this project, I developed a sleek, modern UI for aeducational app
+          aimed at enhancing the online education. The app features a visually
+          striking, user-friendly interface that allows users to learn with
+          ease.
+        </p>
+        <a href="./UIUX projects/Learnzilla.pdf">Learn more</a>
+      </div>
+
+      <img src="images/Learnzilla.png" alt="Fashion UI App Screenshot" />
+    </div>
+
+    <div class="box">
+      <div class="content">
+        <h2>Food app</h2>
+        <p>
+          In this project, I developed a sleek, modern UI for aeducational app
+          aimed at enhancing the online education. The app features a visually
+          striking, user-friendly interface that allows users to learn with
+          ease.
+        </p>
+        <a href="./UIUX projects/Food app.pdf">Learn more</a>
+      </div>
+
+      <img src="images/Food app.png" alt="Fashion UI App Screenshot" />
+    </div>
+  </body>
+</html>

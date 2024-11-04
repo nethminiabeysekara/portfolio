@@ -1,0 +1,353 @@
+/* Styling for the entir page */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #080808;
+  color: #fff;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  width: 100%;
+  height: 100%;
+}
+
+#container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+}
+
+/* Responsive Navigation */
+.navbar .menu-toggle {
+  display: none;
+  font-size: 24px;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    background-color: #333;
+    width: 100%;
+  }
+
+  .navbar ul.active {
+    display: flex;
+  }
+
+  .navbar .menu-toggle {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+/* Navigation Bar */
+.navbar {
+  width: 100%;
+  background-color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .logo {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+  white-space: nowrap; /* Prevents the text from wrapping to the next line */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 150px;
+}
+
+.navbar ul li a:hover {
+  color: #ff004f;
+}
+
+/* Centered Container for the Page */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styling for hero page Section */
+.col-2 {
+  margin-top: 20%;
+  font-size: 30px;
+}
+
+.col-1 {
+  flex-basis: 40%;
+  min-width: auto;
+  margin-bottom: 20px;
+}
+
+.col-1 img {
+  margin-top: 160px;
+
+  height: 350px;
+  border-radius: 50%;
+  box-shadow: 0 0 50px rgb(130, 61, 61);
+  transition: 0.4s ease-in-out;
+  margin-left: 280px;
+  background-color: #1a1a1a;
+}
+
+.col-1 img:hover {
+  box-shadow: 0 0 25px rgb(130, 61, 61), 0 0 50px rgb(130, 61, 61),
+    0 0 100px rgb(130, 61, 61);
+}
+
+.elements {
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: move 2.5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    transform: translate(-15px, 0);
+  }
+
+  50% {
+    transform: translate(0px, -15px);
+  }
+
+  100% {
+    transform: translate(-15px, 0);
+  }
+}
+
+.col-2 h1 {
+  font-size: 60px;
+  margin-top: 20px;
+}
+
+.col-2 h1 span {
+  color: #ff004f;
+}
+
+/* Styling for about section */
+#about {
+  padding: 80px 0;
+  color: #ababab;
+  margin-top: 2px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin-top: 50px;
+}
+.row1 {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 50px;
+}
+
+.about-col-1 {
+  flex-basis: 25%;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-col-1 .img {
+  width: 400px;
+  height: 400px;
+  margin-left: 60px;
+  margin-top: 80px;
+}
+
+.about-col-2 p {
+  line-height: 30px;
+  word-break: break-all;
+}
+
+.sub-title {
+  font-size: 40px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.tab-titles {
+  display: flex;
+  margin: 20px 0 40px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b54769;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+
+/* Styling for Services section */
+
+#services {
+  padding: 30px 0;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 50px;
+}
+
+.services-list div {
+  background: #262626;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 3000;
+  border-radius: 20px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list div h2 {
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list div p {
+  font-size: 20px;
+}
+
+.services-list div a {
+  text-decoration: none;
+  color: white;
+  font-size: 12px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.services-list div:hover {
+  background: rgb(255, 0, 79, 0.5);
+  transform: translateY(-10px);
+}
+
+.learnmore::after {
+  content: " \2192";
+}
+
+/* Button Styles */
+
+a[download] {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  border: 2px solid #ff004f;
+  background-color: transparent; /* Button background */
+  text-decoration: none;
+  border-radius: 20px; /* Rounded corners */
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  margin-top: 20%; /* Adjust margin for button positioning */
+}
+
+a[download]:hover {
+  background-color: #ff004f;
+}
+
+/* Button Container */
+.button-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 90px;
+  display: flex;
+  gap: 10px;
+  margin-left: 80px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-icons a:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
+}
